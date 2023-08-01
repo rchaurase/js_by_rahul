@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table,tr,th,td{
+      border: 1px solid #15ff00;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello here events is going to happens </h1>
+  <h2 class="event_demo">0</h2>
+  <input class="myBtn" type="button" onclick="myFunction()" value="Click Me">
+  <input class= 'resetBtn' type="button" onclick="reset()" value="Reset">
+  <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="image from google", usemap="#workspace">
+  <map name="workspace">
+    <area shape="rect" coords="45,66,270,298" href="module04/one.html" alt="images">
+  </map>
+  <table cellpadding = '10' cellspacing = '10'>
+    <tr>
+      <th>S.No</th>
+      <th>Languages</th>
+      <th>mostly used for</th>
+    </tr>
+    <tr>
+      <td>1.</td>
+      <td>HTML</td>
+      <td>Front End</td>
+    </tr>
+    <tr>
+      <td>2.</td>
+      <td>CSS</td>
+      <td>Front End</td>
+    </tr>
+    <tr>
+      <td>3.</td>
+      <td>Python</td>
+      <td>Back End</td>
+    </tr>
+  </table>
+  <script>
+    function myFunction(){
+         let value = document.querySelector('.event_demo').innerHTML 
+         value = parseInt(value)+1;
+         document.querySelector('.event_demo').innerHTML = value
+    }
+    function reset(){
+      document.querySelector('.event_demo').innerHTML = 0
+    }
+  
+  </script>
+</body>
+</html>
