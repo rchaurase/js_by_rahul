@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-color: #414141; color:aliceblue;">
+  <h2>Amazing image</h2>
+  <div>
+  <ul id="images">
+     <li>
+      <img width="200px" id="trees" src="https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600" alt="photoshop" />
+     </li>
+     <li>
+      <img width="200px" id="clouds" src="https://images.pexels.com/photos/5282269/pexels-photo-5282269.jpeg?auto=compress&cs=tinysrgb&w=600" alt="photoshop"/>
+     </li>
+     <li>
+      <img width="200px" id="house" src="https://images.pexels.com/photos/2832034/pexels-photo-2832034.jpeg?auto=compress&cs=tinysrgb&w=600" alt="photoshop"/>
+     </li>
+     <li>
+      <img width="200px" id="universe" src="https://images.pexels.com/photos/816608/pexels-photo-816608.jpeg?auto=compress&cs=tinysrgb&w=600" alt="photoshop"/>
+     </li>
+     <li>
+      <img width="200px" id="cat" src="https://images.pexels.com/photos/1741205/pexels-photo-1741205.jpeg?auto=compress&cs=tinysrgb&w=600" alt="photoshop"/>
+     </li>
+     <li>
+      <img width="200px" id="dogs" src="https://images.pexels.com/photos/850602/pexels-photo-850602.jpeg?auto=compress&cs=tinysrgb&w=600" alt="photoshop"/>
+     </li>
+     <li>
+      <img width="200px" id="horse" src="https://images.pexels.com/photos/2313396/pexels-photo-2313396.jpeg?auto=compress&cs=tinysrgb&w=600" alt="photoshop"/>
+     </li>
+     <li>
+      <img width="200px" id="tiger" src="https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg?auto=compress&cs=tinysrgb&w=600" alt="photoshop"/>
+     </li>
+     <li>
+      <a style="color: aliceblue;" href="https://google.com" id = 'google'>Google</a>
+     </li>
+  </ul>
+</div>
+</body>
+<script>
+  // document.getElementById('trees').onclick = function(){
+  //   alert('trees clicked')
+  // }
+   //jQuery -  onEvetListener
+    //attachEvent
+     //type ,timestamp,default preveted 
+  // target , srcElement,currentTarget
+  // clientx,clientY,screenX,screenY
+  // altkey,ctrkey,shiftkey,keycode
+  // const google = document.getElementById('google')
+  // google.addEventListener('click',function(eventObj){
+  //   eventObj.preventDefault();
+  //   eventObj.stopPropagation();
+  //   console.log('google clicked')
+
+  // },false)
+  
+  // const trees = document.getElementById('trees')
+  // trees.addEventListener('click',function(eventObj){
+  //  console.log('clicked on the trees');
+  //  eventObj.stopPropagation()
+  // },false)
+  // const images = document.getElementById('images')
+  // images.addEventListener('click',function(eventObj){
+  //  console.log('clicked inside  the ul');
+  // },false)
+ 
+ const images = document.querySelector('#images')
+ images.addEventListener('click',function(eventObj){
+  console.log(eventObj.target.tagName)
+  if(eventObj.target.tagName === 'IMG'){
+    console.log(eventObj.target.id)
+    let removeIt = eventObj.target.parentNode
+    removeIt.remove()
+  }
+  
+ })
+</script>
+</html>
